@@ -1,6 +1,5 @@
+$(document).ready(function(){
+        console.log("ok");
+})
 
-
-var datos=['uno','dos','tres'];
-
-var datos2=datos.filter(e=>e!="dos");
-console.log(datos2);
+$("h1").text("jjjj").css("color","red");
