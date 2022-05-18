@@ -30,17 +30,17 @@ function cargarCard(textoTitulo, urlFoto){
     card.appendChild(cardBody);
     contenedor.appendChild(card);
     //atributos y clases
-    contenedor.className="col-2";
-    card.className="card"
-    card.style="width: 18rem;";
-    imagen.className="card-img-top";
+    contenedor.className="col-xxl-2 col-xl-3 col-mg-4 col-md-4 col-sm-6 col-xs-6 mb-5 ";
+    card.className="card mx-auto"
+    card.style="width: 12rem;";
+    imagen.className="card-img-top foto";
     imagen.setAttribute("src",urlFoto);
-    cardBody.className="card-body";
-    titulo.className="card-title";
+    cardBody.className="card-body mx-auto";
+    titulo.className="card-title text-center";
     titulo.innerText=textoTitulo;
     boton.className="btn btn-primary";
     boton.innerText="Cambiar imagen";
-
+    //agregar comportamiento click
     boton.addEventListener("click",async function(){
         let nuevaUrlFoto=await cargarFotoPerro(titulo.innerText);
         imagen.setAttribute("src",nuevaUrlFoto);
